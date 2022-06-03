@@ -359,6 +359,10 @@ footer{
   font-size: 18px;;
 }
 
+.logoQuienesSomos{
+  display: none;
+}
+
 /* ----------------------------SECCION SERVICIOS---------------------------- */
 
 #grillaServicios{
@@ -793,6 +797,7 @@ footer{
     padding-right: 15%;
   }
 
+
   #mainQuienesSomos{
     height: 100vh;
   }
@@ -811,5 +816,25 @@ footer{
 
   #mainContacto{
     height: 100vh;
+  }
+
+  /* CREANDO ANIMACIONES Y TRANSICIONES DESAFIO ENTREGABLE */
+
+  .logoQuienesSomos{
+    display: block;
+    width: 250px;
+    margin: auto;
+    margin-top: 50px;
+    animation: fantasma 3s infinite;
+  }
+
+  @keyframes fantasma{
+    0%{opacity: 0%;}
+
+    25%{transform: translateY(-20px);
+    opacity: 100%;
+    }
+
+    100%{opacity: 0%}
   }
 }
