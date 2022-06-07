@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/IMG-6784.jpg">
     <script src="https://kit.fontawesome.com/f9d166c2a9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <title>MGF Seguridad</title>
 </head>
@@ -15,27 +16,52 @@
 
     <!-- INICIO DEL HEADER -->
     <header>
+        <nav class="burgerMenu navbar navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html"><img src="../img/IMG-6784.jpg" class="logo remove_bg" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MGF Seguridad</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="quienesSomos.html">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="business.html">Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    
+                  </ul>
+            
+                </div>
+              </div>
+            </div>
+          </nav>
+
         <nav class="menu">
 
             <div>
                 <a href="../index.html"><img src="../img/IMG-6784.jpg" class="logo remove_bg" alt=""></a>
             </div>
 
-            <input type="checkbox" id="check">
-            <label for="check">
-                <i class="fa-solid fa-bars buttonMenu"></i>
-            </label>
-
             <ul class="menuItems">
-                <li><a href="../index.html">Inicio</li></a>  
-                <li><a href="quienesSomos.html">Quienes somos</li></a>
-                <li><a href="servicios.html">Servicios</li></a>
-                <li><a href="clientes.html">Clientes</li></a>
-                <li><a href="business.html">Business</li></a>
-                <li><a href="contacto.html">Contacto</li></a>
-            </ul>
-
-            <ul class="menuItemsDesplegable">
                 <li><a href="../index.html">Inicio</li></a>   
                 <li><a href="quienesSomos.html">Quienes somos</li></a>
                 <li><a href="servicios.html">Servicios</li></a>
@@ -43,6 +69,8 @@
                 <li><a href="business.html">Business</li></a>
                 <li><a href="contacto.html">Contacto</li></a>
             </ul>
+
+            
         </nav>
     </header>
     <!-- FIN DEL HEADER -->
@@ -112,5 +140,8 @@
     <!-- FIN DEL FOOTER -->
 
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

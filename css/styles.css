@@ -5,7 +5,7 @@
   margin: 0; 
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none !important;
   list-style: none;
 }
 
@@ -63,14 +63,20 @@ footer{
 
 /* ----------------------------HEADER---------------------------- */
 header{
-  width: 100%;
+  width:100%;
   background-color: #fcfafa;
 }
 
+.burgerMenu{
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
 .menu{
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+  display: none;
 }
 
 .logo{
@@ -79,51 +85,10 @@ header{
   margin-top: 7px;
 }
 
-.menuItems{
-  position: fixed;
-  left: -1000px;
-  display: flex;
-  gap: 30px;
-  text-transform: uppercase;
-  display: none;
-}
-
 .menuItems li a{
   color: black;
 }
 
-.buttonMenu{
-  font-size: 32px;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.menuItemsDesplegable{
-  position: fixed;
-  left: -100%;
-  top: 70px;
-  background-color: lightgray;
-  width: 100%;
-  right: 0;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 40px;
-  z-index: 100;
-}
-
-.menuItemsDesplegable li a{
-  color: black;
-  font-weight: 700;
-}
-
-#check{
-  display: none;
-}
-
-#check:checked ~ ul{
-  left: 0;
-  transition: all .7s;
-}
 
 /* ----------------------------BANNER---------------------------- */
 .bannerContainer{
@@ -220,6 +185,9 @@ header{
 .serviciosCardContent h3 {
   text-align: center;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .buttonLeerMas{
@@ -285,7 +253,6 @@ textarea{
   padding: 12px;
   cursor: pointer;
   color: #ffff;
-  height: 40px;
 }
 
 .indexContactText img{
@@ -304,7 +271,6 @@ textarea{
 .footerContent{
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
   text-align: center;
   gap: 8px;
 }
@@ -316,6 +282,7 @@ textarea{
 .copyright p{
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 0 !important;
 }
 
 
@@ -369,7 +336,7 @@ footer{
   font-family: 'Poppins', sans-serif;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 110px 2fr 0.5fr;
+  grid-template-rows: 110px 2fr 100px;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
@@ -413,7 +380,6 @@ footer{
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
-  margin-top: 50px;
 }
 
 .serviciosCard{
@@ -428,19 +394,16 @@ footer{
 
 .serviciosCardContent{
   padding: 0% 6% 0% 6%;
+  height: 15rem;
 }
 
-/* .serviciosCardButton{
-  display: flex;
-  justify-content: flex-end;
-  font-size: 16px;
-  background-color: #1f53c5;
+.serviciosCardContent{
+  font-size: 15px;
 }
 
-.serviciosCardButton a{
-  color: #ffff;
+.card-body h5{
+  height: 50px;
 }
- */
 
  /* ----------------------------SECCION CLIENTES---------------------------- */
 
@@ -483,16 +446,20 @@ footer{
   align-items: baseline;
 }
 
-.card{
+.cardCliente{
   width: 200px;
   background-color: #ffff;
   margin: 50px 25px 0px 25px;
+  border: none;
 }
 
-.card img{
+.cardCliente img{
   width: 100%;
 }
 
+.card{
+  margin: 25px;
+}
  /* ----------------------------SECCION BUSINESS---------------------------- */
 
  #grillaBusiness{
@@ -615,15 +582,30 @@ footer{
 }
 
 @media (min-width: 1024px) {
+
   label {
     display: none;
   }
 
-  .menuItems{
-    position: relative;
-    left: 0;
-    margin-right: 20px;
+  .burgerMenu{
+    display: none;
+  }
+
+  .menu{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  .menuItems{
+    display: flex;
+    gap: 25px;
+    margin-right: 20px;
+  } 
+
+  .menuItems li a{
+    text-decoration: none;
   }
 
   .serviciosCardContainer{
@@ -655,6 +637,8 @@ footer{
 
   .menuItems{
     margin-right: 60px;
+    gap: 35px;
+    font-size: 18px;
   }
 
   .serviciosCardContainer{
@@ -837,4 +821,8 @@ footer{
 
     100%{opacity: 0%}
   }
+
+  /* BOOTSTRAP  */
+
+
 }
